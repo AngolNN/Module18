@@ -11,3 +11,8 @@ with open('animal.json', encoding="utf8") as f:
 animal = sorted(animal, key=lambda s: s['animal'])
 
 print(people, animal)
+
+for i in people: """"вывод инфо об потенциальных питомцах по видовым 
+предпочтениям хозяина в виде e-mail - данные подходящих питомцев"""
+    
+    print(i["email"], ([j for j in animal if j['animal'] == i.get("animal")])) 
